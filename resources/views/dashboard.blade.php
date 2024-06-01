@@ -1,18 +1,13 @@
 @include('header')
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
   <!-- Preloader -->
   <!-- <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div> -->
-
   <!-- Navbar -->
-
   @include('navbar')
-  
   <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
   @include('sidebar')
   <!-- Content Wrapper. Contains page content -->
@@ -44,14 +39,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>{{ $employeeCount }}</h3>
 
                 <p>Total Employee's</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-ios-people"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('employees') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -64,14 +59,14 @@
                 <p>New Joinee</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-person-add"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
-            <!-- small box -->
+            <!-- small box --><ion-icon name="accessibility-outline"></ion-icon>
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3>44</h3>
@@ -79,7 +74,7 @@
                 <p>User Registrations</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-man"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -94,7 +89,7 @@
                 <p>Unique Visitors</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-person-stalker"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -104,12 +99,12 @@
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
-
         </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
+
   <!-- /.content-wrapper -->
 @include('footer')
