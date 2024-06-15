@@ -25,7 +25,7 @@ Route::middleware(['auth'])->group(function () {
     
     Route::get('/dashboard', [EmployeeController::class, 'totalEmp'])->name('dashboard');
     Route::get('/Employees', [EmployeeController::class, 'empList'])->name('employees');
-
+    Route::get('/Employees-count', [EmployeeController::class, 'counttotalEmp'])->name('countemp');
     
 });
 

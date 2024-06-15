@@ -13,11 +13,15 @@ class EmployeeController extends Controller
         return view('dashboard', compact('employeeCount'));
     }
 
-
-    public function empList() {
-
-        return view('employeesList');
+    public function empList()
+    {
+        $employeeCount = Employee::getTotalCount();
+        // $employees = Employee::paginate(10);
         
+        return view('employeesList', [
+            'employeeCount' => $employeeCount
+        ]);
     }
+
 }
  
